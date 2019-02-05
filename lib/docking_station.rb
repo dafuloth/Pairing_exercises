@@ -1,6 +1,6 @@
-class docking_station
+class DockingStation
   def initialize()
-    
+
   end
 end
 
