@@ -11,7 +11,7 @@ So that I can use a good bike,
 I'd like to see if a bike is working
 
 <table>
-<tr><td>Objects</td><td>Messages</td>
+<tr><td>**Objects**</td><td>**Messages**</td>
 <tr><td>Person</td><td>person_name</td></tr></tr>
 <tr><td>Bike</td><td>is_good</td></tr></tr>
 <tr><td>Docking Station</td><td>has_bike</td></tr></tr>
