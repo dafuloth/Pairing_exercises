@@ -1,6 +1,6 @@
 # Challenge 2: Working with User Stories
 
-** User stories:**
+**User stories:**
 
 As a person,
 So that I can use a bike,
