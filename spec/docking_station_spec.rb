@@ -13,9 +13,10 @@ describe DockingStation do
 
   it 'docks a bike' do
     # arrange
+    bike = Bike.new
     docking_station = DockingStation.new
     docking_station.dock_bike(bike)
-    expect(docking_station.bikes).not_to be_empty 
+    expect(docking_station.bikes).not_to be_empty
   end
   # # arrange
   # docking_station = DockingStation.new
