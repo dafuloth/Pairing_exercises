@@ -18,11 +18,13 @@ describe DockingStation do
     docking_station.dock_bike(bike)
     expect(docking_station.bikes).not_to be_empty
   end
+
+
+  it { is_expected.to respond_to(:dock_bike).with(1).argument }
+end
   # # arrange
   # docking_station = DockingStation.new
   # # act
   # bike = docking_station.release_bike
   # # assert
   # it { is_expected bike.class to eq Bike}
-
-end
