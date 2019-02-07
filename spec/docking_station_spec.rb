@@ -16,7 +16,7 @@ describe DockingStation do
     bike = Bike.new
     docking_station = DockingStation.new
     docking_station.dock_bike(bike)
-    expect(docking_station.bikes).not_to be_empty
+    expect(docking_station.bike.class).to eq Bike
   end
 
 
