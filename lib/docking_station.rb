@@ -1,11 +1,15 @@
 class DockingStation
+  attr_reader :bikes
+
+  def initialize()
+    @bikes = []
+  end
+
   def release_bike
     bike = Bike.new
   end
-end
 
-class Bike
-  def working?
-    true
+  def dock_bike(bike)
+     @bikes.push(bike)
   end
 end
