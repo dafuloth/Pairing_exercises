@@ -37,7 +37,7 @@ describe DockingStation do
 
   it 'cannot accept more bikes than it has capacity for' do
     station = DockingStation.new
-    20.times {station.dock_bike(Bike.new)}
+    DockingStation::DEFAULT_CAPACITY.times {station.dock_bike(Bike.new)}
     expect{station.dock_bike(Bike.new)}.to raise_error("Cannot dock. Dock occupied.") 
   end
 
