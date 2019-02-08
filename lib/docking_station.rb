@@ -1,7 +1,7 @@
 require_relative 'bike'
 
 class DockingStation
-  attr_reader :bike
+  attr_reader :bikes
 
 
   def initialize()
@@ -10,12 +10,12 @@ class DockingStation
 
   def release_bike
     #fail "no bike is docked" unless @bike.class == Bike 
-    if @bike.class != Bike then raise("no bike is docked") end
-    @bike
+    raise("no bike is docked") if @bikes.empty?
+    @bikes.pop()
   end
 
   def dock_bike(bike)
-    fail "Cannot dock. Dock occupied." if @bike
-    @bike = bike
+    fail "Cannot dock. Dock occupied." if @bikes.count == 20
+    @bikes.push(bike)
   end
 end
