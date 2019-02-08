@@ -31,8 +31,17 @@ describe DockingStation do
     expect(docking_station.bike.class).to eq Bike
   end
 
-
+  # Challenge 11
   it { is_expected.to respond_to(:dock_bike).with(1).argument }
+
+  it 'cannot accept more bikes than it has capacity for' do
+    bike = Bike.new
+    station = DockingStation.new
+    station.dock_bike(bike)
+    expect{station.dock_bike(bike)}.to raise_error("Cannot dock. Dock occupied.") 
+  end
+
+
 end
   # # arrange
   # docking_station = DockingStation.new

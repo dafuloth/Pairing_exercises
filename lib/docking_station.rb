@@ -5,7 +5,7 @@ class DockingStation
 
 
   def initialize()
-    #@bikes = []
+    @bikes = []
   end
 
   def release_bike
@@ -15,6 +15,7 @@ class DockingStation
   end
 
   def dock_bike(bike)
-     @bike = bike
+    fail "Cannot dock. Dock occupied." if @bike
+    @bike = bike
   end
 end
