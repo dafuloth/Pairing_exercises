@@ -9,7 +9,9 @@ class DockingStation
   end
 
   def release_bike
-    Bike.new
+    #fail "no bike is docked" unless @bike.class == Bike 
+    if @bike.class != Bike then raise("no bike is docked") end
+    @bike
   end
 
   def dock_bike(bike)

@@ -5,10 +5,22 @@ describe DockingStation do
     expect(subject).to respond_to :release_bike
   end
 
-  it "gets the bike and expects it to work" do
-    docking_station = DockingStation.new
-    bike = subject.release_bike
-    expect(bike.working?).to eq true
+  # it "gets the bike and expects it to work" do
+  #   docking_station = DockingStation.new
+  #   bike = subject.release_bike
+  #   expect(bike.working?).to eq true
+  # end
+
+  it "gets the bike and it is working" do
+    bike = Bike.new
+    station = DockingStation.new
+    station.dock_bike(bike)
+    expect(station.release_bike).to eq(bike)
+    expect(bike.working?).to eq(true)
+  end
+
+  it "doesn't release a bike if no bike docked" do
+    expect{subject.release_bike}.to raise_error("no bike is docked")
   end
 
   it 'docks a bike' do
